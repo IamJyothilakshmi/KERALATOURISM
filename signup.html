@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn</title>
+    <title>SignUp</title>
     <link rel="stylesheet" href="css/pictures/logo.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
@@ -48,35 +48,36 @@
    <div class="col-lg-2 myForm"></div>
    <!-- Form div startd here -->
    <div class="col-md-7 myForm">
-     <form>
+     <form action="login.html" onsubmit="return validate()">
  <div class="form-row">
    <div class="form-group col-md-6">
      <label for="inputEmail4">Email</label>
-     <input type="email" class="form-control" id="inputEmail4">
+     <input type="email" class="form-control" id="inputEmail4" required>
    </div>
+   <label for="error" id="error"></label>
    <div class="form-group col-md-6">
      <label for="inputPassword4">Password</label>
-     <input type="password" class="form-control" id="inputPassword4">
+     <input type="password" class="form-control" id="inputPassword4" required>
    </div>
  </div>
  <div class="form-group col-md-6">
    <label for="inputAddress">Address</label>
-   <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+   <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
  </div>
  <div class="form-group col-md-6">
    <label for="inputAddress2">Address 2</label>
-   <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+   <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
  </div>
  <div class="form-row">
    <div class="form-group col-md-6">
      <label for="inputCity">City</label>
-     <input type="text" class="form-control" id="inputCity">
+     <input type="text" class="form-control" id="inputCity" required>
    </div>
    <div class="form-group col-md-4">
      <label for="inputState">State</label>
      <select id="inputState" class="form-control">
        <option selected>Choose...</option>
-       <option>...</option>
+       <option>.kottayam..</option>
      </select>
    </div>
    <div class="form-group col-md-2">
@@ -92,13 +93,36 @@
      </label>
    </div>
  </div>
- <button type="submit" class="btn btn-primary">Sign in</button>
+ <button type="submit" class="btn btn-primary">Sign Up</button>
+ 
 </form>
 </div>
 <!-- /Form div ends here -->
  </div>
 <div class="col-lg-2 myForm"></div>
     </div>
-  
+  <script>
+
+ function validate(){
+  //  let email = document.getElementById("inputEmail4");
+  //  let password = document.getElementById("inputpassword4");
+  //  let error = document.getElementById("error");
+             let regEXP=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\.-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+             if(regexp.test(inputEmail4.value)){
+             error.innerHTML = "Valid";
+              error.style.color = "green";
+        //    // alert("valid")
+              return true;
+   
+         }
+          else {
+               error.innerHTML = "Email is not in proper syntax";
+              // alert("Invalid :Username must contain 10 digits");
+             error.style.color = "red";
+             return false;
+          }
+        
+         }
+  </script>
 </body>
 </html>

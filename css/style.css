@@ -6,7 +6,7 @@
      background-size: cover;
  }
  .navbar {
-     z-index: 9;
+      z-index: 9; 
       width: 100%; 
 font-size: 40px;
 padding: 10px;
@@ -29,9 +29,13 @@ padding-left: 20px;
 .myForm {
     margin: 25px;
     font-size: 20px;
-    
-    
 }
+
+.btn {
+color: white;
+
+}
+
 .login{
     margin: 40%;
     border: 2px solid blue;
@@ -40,6 +44,8 @@ padding-left: 20px;
      margin-top: 3%; 
    font-size: 20px;
    margin-bottom: 7%;
+   margin-right: 25em;
+   
 }
 .login h2{
     text-align: center;
@@ -48,11 +54,13 @@ padding-left: 20px;
     height: 1.5em;
 }
 .login #login-button{
+    text-decoration: none;
     width: 100%;
     height: 1.8em;
-    color: white;
-    background-color: dodgerblue;
-    border: dodgerblue;
+    color: whitesmoke;
+    background-color: dodgerblue; 
+     border: dodgerblue; 
+    
 }
 /* p-box */
 .container{
