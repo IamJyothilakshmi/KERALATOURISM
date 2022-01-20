@@ -4,6 +4,7 @@
  } 
  body {
      background-size: cover;
+     
  }
  .navbar {
       z-index: 9; 
@@ -29,6 +30,7 @@ padding-left: 20px;
 .myForm {
     margin: 25px;
     font-size: 20px;
+    float: right;
 }
 
 .btn {
@@ -37,10 +39,11 @@ color: white;
 }
 
 .login{
+    
     margin: 40%;
     border: 2px solid blue;
     padding: 40px;
-    background-color: whitesmoke;
+    background-color: transparent;
      margin-top: 3%; 
    font-size: 20px;
    margin-bottom: 7%;

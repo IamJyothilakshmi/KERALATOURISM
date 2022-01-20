@@ -12,58 +12,38 @@
 </head>
  <body>
     
-    <div class="navbar">  
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#"><img src="css/pictures/logo.jpg"></a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-            
-              <li class="nav-item">
-                <a class="nav-link " href="#">SignUp </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active " href="login.html">LogIn</a>
-              </li>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="district.html">Districts</a>
-            </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav> 
+
+           
     
-      
-   <div class="col-lg-2 myForm"></div>
+   
    <!-- Form div startd here -->
-   <div class="col-md-7 myForm">
-     <form action="login.html" onsubmit="return validate()">
+   
+      
+    
+
+<div class="col-lg-7 myForm">
+   
+     <form action = "login.html">
  <div class="form-row">
+
+ 
    <div class="form-group col-md-6">
-     <label for="inputEmail4">Email</label>
-     <input type="email" class="form-control" id="inputEmail4" required>
+     <label for="inputfirstname">First Name</label>
+     <input type="text" class="form-control" id="firstname" required>
    </div>
-   <label for="error" id="error"></label>
+   
    <div class="form-group col-md-6">
-     <label for="inputPassword4">Password</label>
-     <input type="password" class="form-control" id="inputPassword4" required>
+     <label for="inputlastname">Last Name</label>
+     <input type="text" class="form-control" id="lastname" required>
    </div>
  </div>
+ 
+
  <div class="form-group col-md-6">
    <label for="inputAddress">Address</label>
    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
  </div>
+
  <div class="form-group col-md-6">
    <label for="inputAddress2">Address 2</label>
    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
@@ -75,54 +55,40 @@
    </div>
    <div class="form-group col-md-4">
      <label for="inputState">State</label>
-     <select id="inputState" class="form-control">
+     <select id="inputState" class="form-control" required>
        <option selected>Choose...</option>
-       <option>.kottayam..</option>
+       <option>Kerala</option>
+       <option>Tamil Nadu</option>
      </select>
    </div>
-   <div class="form-group col-md-2">
-     <label for="inputZip">Zip</label>
-     <input type="text" class="form-control" id="inputZip">
-   </div>
+  
+<br>
+   <div class="form-group col-md-4">
+     <label for="inputZip">Country</label>
+     <input type="text" class="form-control" id="inputCountry" required>
+      
+    </div> 
  </div>
  <div class="form-group">
    <div class="form-check">
-     <input class="form-check-input" type="checkbox" id="gridCheck">
+     <input class="form-check-input" type="checkbox" id="gridCheck" required>
      <label class="form-check-label" for="gridCheck">
        Check me out
      </label>
+     <br>
+     
    </div>
  </div>
+ <br>
  <button type="submit" class="btn btn-primary">Sign Up</button>
- 
 </form>
 </div>
 <!-- /Form div ends here -->
  </div>
 <div class="col-lg-2 myForm"></div>
     </div>
-  <script>
+  
 
- function validate(){
-  //  let email = document.getElementById("inputEmail4");
-  //  let password = document.getElementById("inputpassword4");
-  //  let error = document.getElementById("error");
-             let regEXP=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\.-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-             if(regexp.test(inputEmail4.value)){
-             error.innerHTML = "Valid";
-              error.style.color = "green";
-        //    // alert("valid")
-              return true;
-   
-         }
-          else {
-               error.innerHTML = "Email is not in proper syntax";
-              // alert("Invalid :Username must contain 10 digits");
-             error.style.color = "red";
-             return false;
-          }
-        
-         }
-  </script>
+
 </body>
 </html>

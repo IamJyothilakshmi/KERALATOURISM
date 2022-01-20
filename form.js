@@ -51,5 +51,20 @@
      }
     
        }
+       function validation(){
+           let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z{2,3}])(.[a-z{2,3}])?$/;
+           if(regexp.test(email.value)){
+               
+               error.innerHTML = "Valid";
+               error.style.color = "green";
+               return true;
+           }
+           else{
+            alert("Email should be in the correct format.")
+               error.innerHTML = "Invalid";
+               error.style.color = "red";
+               return false;
+           }
+       }
 
     
