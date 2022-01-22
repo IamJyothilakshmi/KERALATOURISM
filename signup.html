@@ -40,7 +40,7 @@
  <label for="error" id="error"></label>
 
  <div class="form-group col-md-6">
-   <label for="inputEmail">Email</label>
+   <label for="email">Email</label>
    <input type="text" class="form-control" id="email" placeholder="email" required>
  </div>
 
@@ -88,24 +88,25 @@
 <div class="col-lg-2 myForm"></div>
     </div>
   <script >
-    let error = document.getElementById("error");
-     let inputEmail=document.getElementById("inputEmail");
-    function validation(){
-           let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})$/;
-           if(eregexp.test(email.value)){
+     let error = document.getElementById("error");
+      let email = document.getElementById("email");
+     function validation(){
+            let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})$/;
+            if(eregexp.test(email.value)){
                
-               error.innerHTML = "Valid";
-               error.style.color = "green";
-               return true;
+                error.innerHTML = "Valid";
+                error.style.color = "green";
+                error.style.border = "2px soild green";
+                return true;
+            }
+            else{
+                //  alert("Email should be in the correct format.")
+                 error.innerHTML = "Invalid";
+                 error.style.color = "red";
+                 error.style.border = "2px soild red";
+                return false;
+            }
            }
-           else{
-              //  alert("Email should be in the correct format.")
-               error.innerHTML = "Invalid";
-               error.style.color = "red";
-               error.style.border = "2px soild red";
-               return false;
-           }
-          }
   </script>
 
 

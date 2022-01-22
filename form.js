@@ -1,7 +1,7 @@
 let email=document.getElementById("email");
 let error=document.getElementById("error");
 let phoneno=document.getElementById("phoneno");
-// let password=document.getElementById("password");
+  let password=document.getElementById("password");
    
 
 
@@ -55,7 +55,7 @@ let phoneno=document.getElementById("phoneno");
     
        }
        function validation(){
-           let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})$/;
+           let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
            if(eregexp.test(email.value)){
                
                error.innerHTML = "Valid";
@@ -63,7 +63,7 @@ let phoneno=document.getElementById("phoneno");
                return true;
            }
            else{
-               alert("Email should be in the correct format.")
+             alert("Email should be in the correct format.")
                error.innerHTML = "Invalid";
                error.style.color = "red";
                error.style.border = "2px soild red";
