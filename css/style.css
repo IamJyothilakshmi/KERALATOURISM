@@ -61,6 +61,7 @@ color: white;
     text-align: center;
 }
 .login input{
+    width: 18em;
     height: 1.5em;
 }
 .login #login-button{

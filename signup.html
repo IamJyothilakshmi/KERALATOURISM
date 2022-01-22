@@ -41,7 +41,7 @@
 
  <div class="form-group col-md-6">
    <label for="email">Email</label>
-   <input type="text" class="form-control" id="email" placeholder="email" required>
+   <input type="text" class="form-control" id="email" placeholder="eg@gmail.xxx OR eg@gmail.xxx.xx " required>
  </div>
 
  <div class="form-group col-md-6">
@@ -54,17 +54,17 @@
      <input type="text" class="form-control" id="inputCity" required>
    </div>
    <div class="form-group col-md-4">
-     <label for="inputState">State</label>
-     <select id="inputState" class="form-control" required>
-       <option selected>Choose...</option>
-       <option>Kerala</option>
-       <option>Tamil Nadu</option>
-     </select>
-   </div>
+     <!-- <label for="inputState">State</label> -->
+     <!-- <select id="inputState" class="form-control" required> -->
+       <!-- <option selected>Choose...</option>
+       
+       
+     </select> -->
+   <!-- </div> -->
   
 <br>
    <div class="form-group col-md-4">
-     <label for="inputZip">Country</label>
+     <label for="inputZip">State</label>
      <input type="text" class="form-control" id="inputCountry" required>
       
     </div> 
@@ -91,7 +91,7 @@
      let error = document.getElementById("error");
       let email = document.getElementById("email");
      function validation(){
-            let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})$/;
+             let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
             if(eregexp.test(email.value)){
                
                 error.innerHTML = "Valid";
@@ -100,7 +100,7 @@
                 return true;
             }
             else{
-                //  alert("Email should be in the correct format.")
+                  // alert("Email should be in the correct format.")
                  error.innerHTML = "Invalid";
                  error.style.color = "red";
                  error.style.border = "2px soild red";
