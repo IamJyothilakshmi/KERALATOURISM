@@ -1,4 +1,7 @@
-  
+let email=document.getElementById("email");
+let error=document.getElementById("error");
+let phoneno=document.getElementById("phoneno");
+// let password=document.getElementById("password");
    
 
 
@@ -16,8 +19,8 @@
    
         }
          else {
-              error.innerHTML = "Invalid :Username must contain 10 digits";
-             alert("Invalid :Username must contain 10 digits");
+              error.innerHTML = "Invalid :Phone No should be in the format XXXXXXXXXX";
+             alert("Invalid :Phone No should be in the format XXXXXXXXXX");
             error.style.color = "red";
             return false;
          }
@@ -52,17 +55,18 @@
     
        }
        function validation(){
-           let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z{2,3}])(.[a-z{2,3}])?$/;
-           if(regexp.test(email.value)){
+           let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})$/;
+           if(eregexp.test(email.value)){
                
                error.innerHTML = "Valid";
                error.style.color = "green";
                return true;
            }
            else{
-            alert("Email should be in the correct format.")
+               alert("Email should be in the correct format.")
                error.innerHTML = "Invalid";
                error.style.color = "red";
+               error.style.border = "2px soild red";
                return false;
            }
        }
