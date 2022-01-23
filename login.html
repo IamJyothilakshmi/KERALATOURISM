@@ -48,9 +48,8 @@
 
 
    <!-- Login Form -->
- <form action="index.html" onsubmit=" return validate(),valid(),validation()"  class="login">
-
- 
+   <form action="index.html"  onsubmit=" return submitter()"  class="login">  
+    
   <h2>User LogIn</h2>
   <br>
   <div class="login-cont">
@@ -65,7 +64,7 @@
       
     </div>  
     <br>
-    <label for="error" id="error"></label>
+    <!-- <label for="error" id="error"></label> -->
     <div class="login-cont">
 
       <label>   Phone No.</label>
@@ -75,9 +74,9 @@
     
   </div>
   <br>
-  <label for="error" id="error"></label>
+   <label for="error" id="error"></label> 
     <div class="login-cont">
-
+      <label for="error" id="error"></label>
       <label>   Password</label>
       <br>
       
@@ -98,11 +97,11 @@
 <!-- /Login Form -->
 
   <script src="form.js" >
- let phoneno = document.getElementsById("phoneno");
-  // let password = document.getElementById("password");
-     let error = document.getElementById("error");
-     let email = document.getElementById("email");
-
+ 
+  if((email.trim()=="") && (password.trim()=="")){
+  alert("Feilds cannot be blank");
+  return false;
+}
   
 </script>
 </body>
