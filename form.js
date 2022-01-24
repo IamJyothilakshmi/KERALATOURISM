@@ -3,10 +3,7 @@
  let phoneno=document.getElementById("phoneno");
 let password = document.getElementById("password");
    
-// if((email.trim()=="") && (password.trim()=="")){
-//   alert("Feilds cannot be blank");
-//   return false;
-// }
+
 
     
 
@@ -15,7 +12,7 @@ let password = document.getElementById("password");
        function validate(){
             let regexp=/^([0-9+]{10})$/;
             if(regexp.test(phoneno.value)){
-            error.innerHTML = "Valid";
+            // error.innerHTML = "Valid";
              error.style.color = "green";
        //    // alert("valid")
              return true;
@@ -46,17 +43,22 @@ let password = document.getElementById("password");
          password.style.border = "2px solid red";
          return false;
      }
+     if((password.value.trim()=="")){
+      alert("Password cannot be blank");
+      return false;
+    }
       if(password.value.length<=8){
         alert("Password is medium");
         error.innerHTML = "Password is medium";
         error.style.color = "orange";
         password.style.border = "2px solid orange";
          return false;
-     }
+      }
+      
     else if(password.value.length>8){
        
         alert("Password is strong");
-        error.innerHTML = "Password is stroong";
+        error.innerHTML = "Password is strong";
         error.style.color = "green";
         password.style.border = "2px solid green";
         return true;
@@ -64,18 +66,24 @@ let password = document.getElementById("password");
     
        }
        function validation(){
-           let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+           let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)([.])([a-z]{2,3})(.[a-z]{2,3})?$/;
            if(eregexp.test(email.value)){
                
-               error.innerHTML = "Valid";
+              //  error.innerHTML = "Valid";
                error.style.color = "green";
                return true;
            }
+           if((email.value.trim()=="") ){
+             alert("Email cannot be blank");
+            // error.innerHTML = "Email cannot be blank";
+            // error.style.color = "red";
+            return false;
+          }
            else{
              alert("Email should be eg@gmail.xxx format.");
-               error.innerHTML = "Invalid";
-               error.style.color = "red";
-               error.style.border = "2px soild red";
+              //  error.innerHTML = "Invalid";
+              //  error.style.color = "red";
+              //  error.style.border = "2px soild red";
                return false;
            }
        }
@@ -83,6 +91,7 @@ let password = document.getElementById("password");
    if (!validate())return false;
    if (!valid())return false;
    if (!validation())return false;
+   
    return true;
  }
     

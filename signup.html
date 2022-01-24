@@ -91,7 +91,7 @@
      let error = document.getElementById("error");
       let email = document.getElementById("email");
      function validation(){
-             let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+             let eregexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)([.])([a-z]{2,3})(.[a-z]{2,3})?$/;
             if(eregexp.test(email.value)){
                
                 error.innerHTML = "Valid";
@@ -99,9 +99,14 @@
                 error.style.border = "2px soild green";
                 return true;
             }
+            if((email.value.trim()=="") ){
+            error.innerHTML = "Email cannot be blank";
+            error.style.color = "red";
+            return false;
+          }
             else{
-                  // alert("Email should be in the correct format.")
-                 error.innerHTML = "Invalid";
+                //  alert("Email should be in the correct format.")
+                 error.innerHTML = "Invalid:Email should be eg@email.xxx format";
                  error.style.color = "red";
                  error.style.border = "2px soild red";
                 return false;

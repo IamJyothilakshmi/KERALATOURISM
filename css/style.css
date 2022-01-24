@@ -133,14 +133,29 @@ h3 {
     text-align: center;
     padding-top: 2%;
 }
+  #img{
+   
+   font-size: 120%;
+   font-family: 'Times New Roman', Times, serif;
+   /* font-weight: bold; */
+    font-style: normal; 
+    padding: 40px;
+    padding-bottom: 0em;
+    height: 2em;
+  
+ } 
+ #img a{
+     text-decoration: none;
+     font-size: 25px;
+ }  
 /* footer */
 footer{
     width: 100%;
     background-color: whitesmoke;
     color: black;
      margin-top:38%; 
-   height: 10em; 
-   border-bottom: 20%;
+   height: 12em; 
+   border-bottom: 50%;
    
 }
 
@@ -149,7 +164,8 @@ a {
     
     padding: 50px;
     font-style: initial;
-    padding-left: 25px;
+    /* padding-left: 25px; */
+    /* font-weight: bold; */
     
     
 }
@@ -157,3 +173,13 @@ a {
     padding: 25px;
     background-color: whitesmoke;
 }
+   
+ #p{
+    padding-top: 39%;
+    /* padding: 40px; */
+    font-style: italic;
+    font-weight: lighter;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 1em;
+} 
